@@ -1,0 +1,49 @@
+AULA 02 - 22/08/2022
+
+Criar imgagem docker.
+$ docker pull postgres
+
+Criar container Postgres e definir senha.
+$ docker run --name postgres_container -e POSTGRES_PASSWORD=postgres -d postgres
+
+Executar conteiner Postgres.
+$ docker exec -it postgres_container psql -U postgres
+
+Exemplo de BD para o aluno online iesb.
+
+Criar BD específico.
+$ CREATE DATABASE IESB
+
+Listar BD.
+$ \l
+
+Listar tabelas.
+$ \dt
+
+Conectar BD específico.
+$ \c iesb
+
+Listar schemas.
+$ \dn
+
+Criar schema específico.
+$ CREATE SCHEMA AONLINE;
+
+Deletar schema esécífico.
+$ DROP SCHEMA AONLINE.
+
+Criar tabela aluno dentro do schema public.
+$ CREATE TABLE ALUNO(MATRICULA INT, NOME VARCHAR(60), NASCIMENTO DATE);
+
+Criar tabela aluno em um schema específico.
+$ CREATE TABLE AONLINE.ALUNO(MATRICULA INT, NOME VARCHAR(60), NASCIMENTO DATE);
+
+Listar todas as tabelas de um esquema.
+$ \dt aonline.*
+
+Apagar tabela no schema public.
+$ DROP TABLE
+
+Apagar um BD específico, conectar em outro BD e rodar o comando.
+$ DROP DATABASE IESB;
+
