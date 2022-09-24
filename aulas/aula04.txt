@@ -1,0 +1,16 @@
+1) Criar os usuarios -- CREATE USER [USUARIO] WITH ENCRYPTED PASSWORD 'SENHA'
+usuario
+professor
+coordenador
+
+2)Conceder privilegio -- GRANT [PRIV]  ON [TABELA] TO [USUARIO]
+aluno só pode consultar [SELECT] todas as tabelas
+
+professor pode consultar todas as tabelas
+e altera [UPDATE] historico
+
+coordenador pode consultar todas as tabelas e
+pode incluir [INSERT] e excluir [DELETE] turma, historico
+
+3) Revogar privilegios
+-- REVOKE [PRIV] ON [TABELA] FROM [USUARIO]
